@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Printer & Office Network Setup - Acme Corp</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; max-width: 780px; margin: 0 auto; padding: 40px 30px; }
+        h1 { color: #1B2A4A; border-bottom: 3px solid #C2761F; padding-bottom: 12px; font-size: 26px; }
+        h2 { color: #2c3e50; margin-top: 30px; font-size: 18px; }
+        h3 { color: #555; margin-top: 20px; font-size: 15px; }
+        .meta { font-family: monospace; background: #f4f4f4; padding: 10px 14px; border-radius: 4px; font-size: 9pt; color: #888; margin-bottom: 20px; }
+        .sla { background: #eef5fb; border-left: 4px solid #1B2A4A; padding: 12px 16px; margin: 20px 0; font-weight: 500; }
+        .escalation { background: #fdf5f5; border-left: 4px solid #d32f2f; padding: 12px 16px; margin: 20px 0; font-weight: 500; }
+        .troubleshooting { background: #fafafa; border: 1px solid #e0e0e0; padding: 18px; border-radius: 6px; margin: 20px 0; }
+        .troubleshooting strong { color: #C2761F; }
+        .note-box { background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 12px 16px; margin: 20px 0; font-size: 95%; }
+        .warning-box { background: #fff3e0; border: 2px solid #e65100; padding: 15px; border-radius: 6px; margin: 20px 0; font-weight: 500; }
+        ol li, ul li { margin-bottom: 8px; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 95%; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 95%; }
+        th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+        th { background: #f5f5f5; font-weight: 600; }
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 9pt; color: #999; text-align: center; }
+        @media print { .meta { background: #f9f9f9; color: #aaa; font-size: 8pt; } body { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+    <div class="meta">Keywords: print, connect to printer, office wifi, corporate network, paper jam, map printer, wireless, network printer, scanning, scan to email, Wi-Fi password, guest wifi, visitor wifi, toner, ink</div>
+
+    <h1>🖨️ Printer & Office Network Setup</h1>
+
+    <div class="sla">
+        <strong>⏱ SLA & Expectations:</strong> Connecting to Wi-Fi and mapping printers is immediate via self-service. If an IT dispatch is required for broken printer hardware, response time is 8 hours.
+    </div>
+
+    <h2>Office Wi-Fi Networks</h2>
+    <table>
+        <tr><th>Network Name</th><th>Who Can Use It</th><th>How to Connect</th></tr>
+        <tr><td><code>AcmeCorp-Secure</code></td><td>All employees (company devices)</td><td>Email + password</td></tr>
+        <tr><td><code>AcmeCorp-Guest</code></td><td>Visitors, contractors, personal phones</td><td>Request daily password from reception</td></tr>
+    </table>
+
+    <h2>How to Connect to Office Wi-Fi (Employees)</h2>
+    <ol>
+        <li>Open your device's <strong>Wi-Fi settings</strong>.</li>
+        <li>Select the network named <code>AcmeCorp-Secure</code>.</li>
+        <li>Enter your standard Acme Corp <strong>email</strong> and <strong>password</strong>.</li>
+        <li>Accept the security certificate if prompted.</li>
+        <li>You should be connected within a few seconds. A lock icon will appear confirming a secure connection.</li>
+    </ol>
+
+    <div class="note-box">
+        <strong>ℹ️ Guest Wi-Fi:</strong> If you have a visitor or contractor who needs internet access, direct them to the front desk/reception. They will receive a daily password for <code>AcmeCorp-Guest</code>. Guest Wi-Fi provides internet access only — it cannot access internal company systems, printers, or file shares.
+    </div>
+
+    <h2>How to Map an Office Printer</h2>
+    <ol>
+        <li>Ensure you are connected to <code>AcmeCorp-Secure</code> Wi-Fi or plugged into an office Ethernet port.</li>
+        <li><strong>Windows:</strong> Open Start Menu → Settings → Bluetooth & Devices → Printers & Scanners → Click <strong>"Add Device"</strong>.</li>
+        <li><strong>macOS:</strong> Open System Settings → Printers & Scanners → Click the <strong>"+"</strong> button.</li>
+        <li>Search for the printer ID printed on the physical sticker on the machine (e.g., <code>NY-Floor3-Color</code> or <code>BLR-Floor2-BW</code>).</li>
+        <li>Select it and click <strong>"Add"</strong>. Drivers will install automatically.</li>
+        <li>Print a test page to confirm the connection.</li>
+    </ol>
+
+    <h2>Common Printer Names by Office</h2>
+    <table>
+        <tr><th>Office Location</th><th>Floor</th><th>Printer Name</th><th>Type</th></tr>
+        <tr><td>New York HQ</td><td>3rd Floor</td><td><code>NY-Floor3-Color</code></td><td>Color + Scanner</td></tr>
+        <tr><td>New York HQ</td><td>5th Floor</td><td><code>NY-Floor5-BW</code></td><td>Black & White only</td></tr>
+        <tr><td>Bangalore</td><td>2nd Floor</td><td><code>BLR-Floor2-BW</code></td><td>Black & White + Scanner</td></tr>
+        <tr><td>Bangalore</td><td>4th Floor</td><td><code>BLR-Floor4-Color</code></td><td>Color + Scanner</td></tr>
+    </table>
+
+    <h2>How to Scan a Document to Email</h2>
+    <ol>
+        <li>Place your document face-down on the printer's flatbed scanner, or in the top document feeder.</li>
+        <li>On the printer's touch screen, tap <strong>"Scan"</strong> → <strong>"Scan to Email"</strong>.</li>
+        <li>Enter your Acme Corp <strong>email address</strong> as the recipient.</li>
+        <li>Choose your preferred format: <strong>PDF</strong> (recommended) or <strong>JPEG</strong>.</li>
+        <li>Tap <strong>"Start Scan"</strong>.</li>
+        <li>The scanned document will arrive in your email inbox within 1–2 minutes.</li>
+    </ol>
+
+    <div class="warning-box">
+        <strong>⚠️ Printing Confidential Documents:</strong> If you are printing sensitive information (HR records, financials, legal contracts), use the <strong>"Secure Print"</strong> feature. When printing, select "Secure Print" in the print dialog and set a 4-digit PIN. You will need to enter this PIN on the printer's touch screen before it releases the print job. This prevents confidential pages from being left unattended in the tray.
+    </div>
+
+    <div class="troubleshooting">
+        <h2>Troubleshooting / Common Errors</h2>
+        <p><strong>Problem:</strong> The printer is added to your computer, but nothing prints.</p>
+        <p><strong>Solution:</strong> Walk to the physical printer. It likely has a paper jam or is out of paper/toner. The LCD screen on the printer will display a message telling you exactly how to resolve this (e.g., "Open Tray 2 and clear paper"). If the screen says "Toner Low", contact the office admin — do not attempt to replace toner yourself.</p>
+        <br>
+        <p><strong>Problem:</strong> Cannot connect to <code>AcmeCorp-Secure</code> Wi-Fi; password is rejected.</p>
+        <p><strong>Solution:</strong> If you recently changed your Acme Corp password, your computer may be trying to use the old one. Choose <strong>"Forget this Network"</strong> in your Wi-Fi settings, then reconnect and type the new password.</p>
+        <br>
+        <p><strong>Problem:</strong> "Scan to Email" is not working — scanned documents never arrive.</p>
+        <p><strong>Solution:</strong> Double-check that you typed your email address correctly on the printer screen (typos are the most common cause). If the email is correct, check your Spam/Junk folder. Scanned emails come from <code>printer@acmecorp.com</code> which spam filters may flag the first time.</p>
+    </div>
+
+    <div class="escalation">
+        <strong>🚨 Escalation Rule:</strong> If the printer has a mechanical failure (e.g., grinding noise, broken screen, visible damage, repeated paper jams that won't clear), or if you are completely unable to connect to the secure Wi-Fi after forgetting the network and retrying, submit an IT Ticket with the category <strong>"Hardware"</strong>. Include the printer name (from the sticker) in your ticket.
+    </div>
+
+    <div class="footer">Acme Corp IT Department — Confidential — Last Updated: September 2026</div>
+
+</body>
+</html>

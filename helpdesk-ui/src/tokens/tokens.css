@@ -1,0 +1,109 @@
+/* ============================================================
+   DESIGN TOKENS — AI-Powered Enterprise Helpdesk
+   Single source of truth for all visual decisions.
+   ============================================================ */
+
+:root {
+  /* ── Colors ─────────────────────────────────────────────── */
+  --color-primary:         #1B2A4A;
+  --color-primary-hover:   #26375F;
+  --color-primary-light:   #E8EDF5;
+  --color-accent:          #C2761F;
+  --color-accent-hover:    #A8641A;
+
+  /* Surfaces */
+  --color-bg:              #F6F7F9;
+  --color-surface:         #FFFFFF;
+  --color-surface-sunken:  #EEF0F3;
+  --color-surface-hover:   #F0F2F5;
+
+  /* Text */
+  --color-text-primary:    #151A23;
+  --color-text-secondary:  #5B6472;
+  --color-text-disabled:   #A0A8B4;
+  --color-text-inverse:    #FFFFFF;
+
+  /* Border */
+  --color-border:          #DEE2E8;
+  --color-border-focus:    #1B2A4A;
+
+  /* Semantic */
+  --color-success:         #1E7A46;
+  --color-success-bg:      #E8F5EE;
+  --color-warning:         #B8790F;
+  --color-warning-bg:      #FEF3E2;
+  --color-error:           #B3261E;
+  --color-error-bg:        #FDECEA;
+  --color-info:            #2461A8;
+  --color-info-bg:         #E8F0FA;
+
+  /* Priority (always paired with icon + text) */
+  --color-priority-low:      #5B6472;   /* text-secondary / neutral */
+  --color-priority-medium:   #2461A8;   /* info */
+  --color-priority-high:     #B8790F;   /* warning */
+  --color-priority-critical: #B3261E;   /* error */
+
+  /* SLA states */
+  --color-sla-ok:      #1E7A46;
+  --color-sla-warning: #B8790F;
+  --color-sla-breach:  #B3261E;
+  --color-sla-breach-bg: #FDECEA;
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-sans:  'Inter', 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:  'IBM Plex Mono', 'Roboto Mono', 'Fira Code', monospace;
+
+  /* Scale */
+  --text-h1:    1.75rem;   /* 28px */
+  --text-h2:    1.25rem;   /* 20px */
+  --text-h3:    1rem;      /* 16px */
+  --text-body:  0.875rem;  /* 14px */
+  --text-small: 0.75rem;   /* 12px */
+  --text-btn:   0.875rem;  /* 14px */
+
+  /* Line heights */
+  --lh-h1:     2.25rem;    /* 36px */
+  --lh-h2:     1.75rem;    /* 28px */
+  --lh-h3:     1.5rem;     /* 24px */
+  --lh-body:   1.25rem;    /* 20px */
+  --lh-small:  1rem;       /* 16px */
+
+  /* Weights */
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --sp-1:   0.25rem;  /*  4px */
+  --sp-2:   0.5rem;   /*  8px */
+  --sp-3:   0.75rem;  /* 12px */
+  --sp-4:   1rem;     /* 16px */
+  --sp-6:   1.5rem;   /* 24px */
+  --sp-8:   2rem;     /* 32px */
+  --sp-12:  3rem;     /* 48px */
+  --sp-16:  4rem;     /* 64px */
+
+  /* ── Border Radius ───────────────────────────────────────── */
+  --radius-badge:   0.25rem;  /* 4px  — badges/chips */
+  --radius-input:   0.375rem; /* 6px  — inputs/buttons */
+  --radius-card:    0.5rem;   /* 8px  — cards/panels */
+  --radius-modal:   0.5rem;   /* 8px  — modals */
+
+  /* ── Shadows (elevation) ─────────────────────────────────── */
+  --shadow-0:  none;
+  --shadow-1:  0 2px 8px rgba(21, 26, 35, 0.08);
+  --shadow-2:  0 8px 24px rgba(21, 26, 35, 0.16);
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --sidebar-width:          220px;
+  --sidebar-collapsed-width: 56px;
+  --topbar-height:          56px;
+  --content-max-width:      1280px;
+  --form-max-width:         640px;
+  --chat-max-width:         720px;
+
+  /* ── Transitions ─────────────────────────────────────────── */
+  --transition-fast:   120ms ease;
+  --transition-base:   200ms ease;
+  --transition-slow:   300ms ease;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hardware Request Policy - Acme Corp</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; max-width: 780px; margin: 0 auto; padding: 40px 30px; }
+        h1 { color: #1B2A4A; border-bottom: 3px solid #C2761F; padding-bottom: 12px; font-size: 26px; }
+        h2 { color: #2c3e50; margin-top: 30px; font-size: 18px; }
+        h3 { color: #555; margin-top: 20px; font-size: 15px; }
+        .meta { font-family: monospace; background: #f4f4f4; padding: 10px 14px; border-radius: 4px; font-size: 9pt; color: #888; margin-bottom: 20px; }
+        .sla { background: #eef5fb; border-left: 4px solid #1B2A4A; padding: 12px 16px; margin: 20px 0; font-weight: 500; }
+        .escalation { background: #fdf5f5; border-left: 4px solid #d32f2f; padding: 12px 16px; margin: 20px 0; font-weight: 500; }
+        .troubleshooting { background: #fafafa; border: 1px solid #e0e0e0; padding: 18px; border-radius: 6px; margin: 20px 0; }
+        .troubleshooting strong { color: #C2761F; }
+        .note-box { background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 12px 16px; margin: 20px 0; font-size: 95%; }
+        .warning-box { background: #fff3e0; border: 2px solid #e65100; padding: 15px; border-radius: 6px; margin: 20px 0; font-weight: 500; }
+        ol li, ul li { margin-bottom: 8px; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 95%; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 95%; }
+        th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+        th { background: #f5f5f5; font-weight: 600; }
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 9pt; color: #999; text-align: center; }
+        @media print { .meta { background: #f9f9f9; color: #aaa; font-size: 8pt; } body { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+    <div class="meta">Keywords: new laptop, broken screen, hardware request, mouse, keyboard, monitor, equipment provisioning, new computer, charger, headset, dock, return old laptop, asset tag, disposal</div>
+
+    <h1>💻 Hardware Request Policy</h1>
+
+    <div class="sla">
+        <strong>⏱ SLA & Expectations:</strong> Manager approval takes up to 24 hours. Once approved, standard hardware delivery takes 3–5 business days. Critical replacements for broken primary devices take 1–2 business days.
+    </div>
+
+    <h2>Available Hardware Catalog</h2>
+    <table>
+        <tr><th>Category</th><th>Examples</th><th>Requires Manager Approval?</th></tr>
+        <tr><td>Laptops</td><td>MacBook Pro 14", Dell Latitude 5540, Lenovo ThinkPad</td><td>Yes</td></tr>
+        <tr><td>Monitors</td><td>Dell 27" 4K, LG UltraWide 34"</td><td>Yes</td></tr>
+        <tr><td>Peripherals</td><td>Wireless mouse, keyboard, USB-C hub, headset</td><td>No (under $100)</td></tr>
+        <tr><td>Docking Stations</td><td>Dell WD19, Thunderbolt 4 Dock</td><td>Yes</td></tr>
+        <tr><td>Chargers & Cables</td><td>Laptop charger, USB-C cable, HDMI cable</td><td>No</td></tr>
+    </table>
+
+    <h2>How to Request New Hardware</h2>
+    <ol>
+        <li>Log into the IT Portal at <strong>support.acmecorp.com</strong>.</li>
+        <li>Click on <strong>"Hardware Catalog"</strong>.</li>
+        <li>Select the equipment you need from the catalog.</li>
+        <li>In the justification box, briefly explain the business need (e.g., "Required for new project X" or "Current mouse is unresponsive").</li>
+        <li>Submit the request.</li>
+        <li>Your direct manager will receive an automated email to approve the expense (for items requiring approval).</li>
+        <li>Once approved, IT will provision the equipment and email you tracking or pickup details.</li>
+    </ol>
+
+    <div class="warning-box">
+        <strong>⚠️ Broken/Damaged Primary Device (Emergency):</strong> If your primary work laptop is physically broken, water-damaged, or stolen — do NOT use the standard hardware catalog. Instead:
+        <ol>
+            <li>File a <strong>"Critical"</strong> priority IT ticket immediately.</li>
+            <li>Bring the damaged device to the nearest IT desk (if possible).</li>
+            <li>IT will issue an emergency loaner laptop within 1–2 business days.</li>
+        </ol>
+    </div>
+
+    <h2>Returning Old Equipment</h2>
+    <ol>
+        <li>When you receive replacement hardware, you <strong>must return</strong> the old device within 5 business days.</li>
+        <li>Back up any personal files (they will be wiped).</li>
+        <li>Bring the old device to the IT desk or schedule a pickup via <strong>support.acmecorp.com/returns</strong>.</li>
+        <li>IT will securely wipe the device, update the asset tracking system, and issue you a return receipt.</li>
+    </ol>
+
+    <div class="note-box">
+        <strong>ℹ️ Asset Tags:</strong> All company hardware has a silver asset tag sticker (e.g., <code>ACME-L-04521</code>). Do not remove this sticker. If it falls off, report it to IT so they can re-tag the device. You will need this number when filing hardware tickets.
+    </div>
+
+    <div class="troubleshooting">
+        <h2>Troubleshooting / Common Errors</h2>
+        <p><strong>Problem:</strong> You haven't received the equipment after a week.</p>
+        <p><strong>Solution:</strong> Check the portal to see the status. The most common delay is that your manager has not clicked the "Approve" button in their email yet. Please remind them.</p>
+        <br>
+        <p><strong>Problem:</strong> You received the wrong equipment or a defective item.</p>
+        <p><strong>Solution:</strong> Do not open or use the incorrect item. File a new ticket referencing your original request number and IT will arrange a swap within 2 business days.</p>
+    </div>
+
+    <div class="escalation">
+        <strong>🚨 Escalation Rule:</strong> If your equipment arrives damaged, if your request has been approved but stuck in "Processing" for more than 4 business days, or if you need to report a lost/stolen company device, submit an IT Ticket immediately.
+    </div>
+
+    <div class="footer">Acme Corp IT Department — Confidential — Last Updated: September 2026</div>
+
+</body>
+</html>

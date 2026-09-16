@@ -1,0 +1,121 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  padding: var(--sp-6);
+}
+
+.login-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--sp-8);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.login-card__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.login-card__brand-icon {
+  width: 40px; height: 40px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-card);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.login-card__brand-name {
+  font-size: var(--text-h2);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+}
+
+.login-card__title {
+  font-size: var(--text-h2);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--lh-h2);
+}
+
+.login-card__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.login-card__hint {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  margin: 0;
+  text-align: center;
+}
+
+.login-card__hint-action {
+  color: var(--color-info);
+}
+
+/* Demo credentials panel */
+.login-card__demo {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.login-card__demo-title {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.login-card__demo-title code {
+  font-family: var(--font-mono);
+  background: var(--color-surface-sunken);
+  padding: 0.1rem 0.3rem;
+  border-radius: var(--radius-badge);
+}
+
+.login-card__demo-rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2);
+}
+
+.login-card__demo-btn {
+  background: var(--color-surface-sunken);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-input);
+  padding: var(--sp-2) var(--sp-3);
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: border-color var(--transition-fast);
+}
+
+.login-card__demo-btn:hover { border-color: var(--color-primary); }
+.login-card__demo-btn:focus-visible { outline: 2px solid var(--color-primary); }
+
+.login-card__demo-btn strong {
+  font-size: var(--text-small);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+}
+
+.login-card__demo-btn span {
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+}

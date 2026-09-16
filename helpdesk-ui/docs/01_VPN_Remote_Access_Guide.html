@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VPN & Remote Access Guide - Acme Corp</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; max-width: 780px; margin: 0 auto; padding: 40px 30px; }
+        h1 { color: #1B2A4A; border-bottom: 3px solid #C2761F; padding-bottom: 12px; font-size: 26px; }
+        h2 { color: #2c3e50; margin-top: 30px; font-size: 18px; }
+        h3 { color: #555; margin-top: 20px; font-size: 15px; }
+        .meta { font-family: monospace; background: #f4f4f4; padding: 10px 14px; border-radius: 4px; font-size: 9pt; color: #888; margin-bottom: 20px; }
+        .sla { background: #eef5fb; border-left: 4px solid #1B2A4A; padding: 12px 16px; margin: 20px 0; font-weight: 500; }
+        .escalation { background: #fdf5f5; border-left: 4px solid #d32f2f; padding: 12px 16px; margin: 20px 0; font-weight: 500; }
+        .troubleshooting { background: #fafafa; border: 1px solid #e0e0e0; padding: 18px; border-radius: 6px; margin: 20px 0; }
+        .troubleshooting strong { color: #C2761F; }
+        .prerequisites { background: #fff8e1; border-left: 4px solid #f9a825; padding: 12px 16px; margin: 20px 0; }
+        .note-box { background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 12px 16px; margin: 20px 0; font-size: 95%; }
+        ol li, ul li { margin-bottom: 8px; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 95%; }
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 9pt; color: #999; text-align: center; }
+        @media print { .meta { background: #f9f9f9; color: #aaa; font-size: 8pt; } body { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+    <div class="meta">Keywords: VPN, remote work, GlobalProtect, connect from home, MFA failure, offsite access, VPN error, work from home, remote access, split tunnel, two-factor authentication, firewall</div>
+
+    <h1>📡 VPN & Remote Access Guide</h1>
+
+    <div class="sla">
+        <strong>⏱ SLA & Expectations:</strong> VPN access is granted by default to all employees. Connection takes less than 1 minute. If escalated to a ticket, IT response time is within 4 hours.
+    </div>
+
+    <div class="prerequisites">
+        <strong>📋 Prerequisites (Before You Start):</strong>
+        <ul>
+            <li>An active Acme Corp employee account (email + password).</li>
+            <li>MFA (Multi-Factor Authentication) already enrolled on your mobile device. If you have not set up MFA, visit <strong>support.acmecorp.com/mfa-setup</strong> first.</li>
+            <li>A stable home internet connection (Wi-Fi or Ethernet).</li>
+            <li>Windows 10/11 or macOS 12+ operating system.</li>
+        </ul>
+    </div>
+
+    <h2>Step-by-Step Instructions</h2>
+    <ol>
+        <li>Navigate to the IT Portal at <strong>support.acmecorp.com/vpn</strong>.</li>
+        <li>Download the Acme Corp VPN Client (GlobalProtect) for your operating system (Windows or macOS).</li>
+        <li>Run the installer and follow the on-screen prompts to complete installation.</li>
+        <li>Launch the VPN Client from your system tray (Windows) or menu bar (macOS).</li>
+        <li>In the Portal Address field, enter: <code>vpn.acmecorp.com</code>.</li>
+        <li>Click <strong>Connect</strong> and enter your standard Acme Corp email and password.</li>
+        <li>Approve the Multi-Factor Authentication (MFA) prompt sent to your mobile device.</li>
+        <li>A green "Connected" status icon will appear in your system tray/menu bar confirming VPN is active.</li>
+    </ol>
+
+    <h2>How to Disconnect</h2>
+    <ol>
+        <li>Click the GlobalProtect icon in your system tray/menu bar.</li>
+        <li>Click <strong>"Disconnect"</strong>.</li>
+        <li>Always disconnect when you are done working to free up VPN capacity for other employees.</li>
+    </ol>
+
+    <div class="note-box">
+        <strong>ℹ️ Important Note — Split Tunnel:</strong> The Acme Corp VPN uses split tunneling. This means only corporate traffic (intranet, internal tools, email) is routed through the VPN. Personal browsing (YouTube, social media) goes through your regular internet and is not monitored or slowed down by the VPN.
+    </div>
+
+    <div class="troubleshooting">
+        <h2>Troubleshooting / Common Errors</h2>
+
+        <p><strong>Problem:</strong> You do not receive the MFA prompt on your phone.</p>
+        <p><strong>Solution:</strong> Open your authenticator app and manually type the 6-digit code into the VPN prompt window instead of waiting for the push notification. If the code is expired, wait for the next code to appear (they refresh every 30 seconds).</p>
+        <br>
+        <p><strong>Problem:</strong> VPN connection hangs at "Connecting..." or shows Error 800.</p>
+        <p><strong>Solution:</strong> Disconnect from your home Wi-Fi, reconnect to it, and restart your computer. This clears local DNS caching issues 90% of the time.</p>
+        <br>
+        <p><strong>Problem:</strong> VPN connects but you cannot access any internal websites or applications.</p>
+        <p><strong>Solution:</strong> Your personal firewall or antivirus may be blocking the VPN tunnel. Temporarily disable third-party firewall software (e.g., Norton, McAfee) and try again. Windows Defender does not need to be disabled.</p>
+    </div>
+
+    <div class="escalation">
+        <strong>🚨 Escalation Rule:</strong> If you have restarted your computer and still cannot connect after 3 attempts, or if your MFA device is lost/broken, submit an IT Ticket with the category <strong>"Network"</strong>. Include your operating system version and the exact error message or screenshot.
+    </div>
+
+    <div class="footer">Acme Corp IT Department — Confidential — Last Updated: September 2026</div>
+
+</body>
+</html>

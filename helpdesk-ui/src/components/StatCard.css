@@ -1,0 +1,42 @@
+.stat-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast);
+}
+
+.stat-card--clickable { cursor: pointer; }
+.stat-card--clickable:hover { border-color: var(--color-primary); }
+.stat-card--active { border-color: var(--color-primary); box-shadow: 0 0 0 2px rgba(27, 42, 74, 0.12); }
+.stat-card--clickable:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+
+.stat-card__label {
+  font-size: var(--text-small);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stat-card__value {
+  font-size: 2rem;
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.stat-card__sublabel {
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+.stat-card--error .stat-card__value   { color: var(--color-error); }
+.stat-card--success .stat-card__value { color: var(--color-success); }
+.stat-card--warning .stat-card__value { color: var(--color-warning); }

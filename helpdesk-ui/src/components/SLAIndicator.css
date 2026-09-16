@@ -1,0 +1,30 @@
+.sla-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-mono);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-badge);
+  position: relative;
+}
+
+.sla-indicator--md { font-size: var(--text-small); padding: 0.15rem 0.5rem; }
+.sla-indicator--sm { font-size: 0.6875rem; padding: 0.1rem 0.35rem; }
+
+.sla-indicator--ok      { color: var(--color-sla-ok);      background: #E8F5EE; }
+.sla-indicator--warning { color: var(--color-sla-warning); background: var(--color-warning-bg); }
+.sla-indicator--breach  { color: var(--color-sla-breach);  background: var(--color-sla-breach-bg); }
+
+.sla-indicator__pulse {
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--color-error);
+  animation: pulse 1.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}

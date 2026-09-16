@@ -1,0 +1,12 @@
+.category-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-badge);
+  white-space: nowrap;
+}
+
+.category-chip--md { font-size: var(--text-small); padding: 0.15rem 0.5rem; }
+.category-chip--sm { font-size: 0.6875rem; padding: 0.1rem 0.35rem; }

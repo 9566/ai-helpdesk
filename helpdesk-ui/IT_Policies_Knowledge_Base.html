@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Corp IT Policies & Knowledge Base</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #1B2A4A;
+            border-bottom: 2px solid #C2761F;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            page-break-before: always;
+        }
+        h1:first-of-type {
+            page-break-before: avoid;
+            margin-top: 0;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        p, li {
+            font-size: 11pt;
+        }
+        .meta {
+            font-family: monospace;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 9pt;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .sla {
+            background: #eef5fb;
+            border-left: 4px solid #1B2A4A;
+            padding: 10px 15px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        .escalation {
+            background: #fdf5f5;
+            border-left: 4px solid #d32f2f;
+            padding: 10px 15px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        .troubleshooting {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .troubleshooting strong {
+            color: #C2761F;
+        }
+        @media print {
+            body { padding: 0; }
+            .meta { display: none; } /* Hide meta tags from humans reading the PDF */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Document 1 -->
+    <div class="meta">Keywords: VPN, remote work, GlobalProtect, connect from home, MFA failure, offsite access, VPN error</div>
+    <h1>VPN & Remote Access Guide</h1>
+    
+    <div class="sla">
+        <strong>SLA & Expectations:</strong> VPN access is granted by default to all employees. Connection takes &lt;1 minute. If escalated to a ticket, IT response time is within 4 hours.
+    </div>
+
+    <h2>Step-by-Step Instructions</h2>
+    <ol>
+        <li>Navigate to the IT Portal at <strong>support.acmecorp.com/vpn</strong>.</li>
+        <li>Download the Acme Corp VPN Client (GlobalProtect) for your operating system (Windows or macOS).</li>
+        <li>Run the installer and follow the on-screen prompts to complete installation.</li>
+        <li>Launch the VPN Client from your system tray or applications folder.</li>
+        <li>In the Portal Address field, enter: <code>vpn.acmecorp.com</code>.</li>
+        <li>Click <strong>Connect</strong> and enter your standard Acme Corp email and password.</li>
+        <li>Approve the Multi-Factor Authentication (MFA) prompt sent to your mobile device.</li>
+    </ol>
+
+    <div class="troubleshooting">
+        <h3>Troubleshooting / Common Errors</h3>
+        <p><strong>Problem:</strong> You do not receive the MFA prompt on your phone.</p>
+        <p><strong>Solution:</strong> Open your authenticator app and manually type the 6-digit code into the VPN prompt window instead of waiting for the push notification.</p>
+        <br>
+        <p><strong>Problem:</strong> VPN connection hangs at "Connecting..." or shows Error 800.</p>
+        <p><strong>Solution:</strong> Disconnect from your home Wi-Fi, reconnect to it, and restart your computer. This clears local DNS caching issues 90% of the time.</p>
+    </div>
+
+    <div class="escalation">
+        <strong>Escalation Rule:</strong> If you have restarted your computer and still cannot connect after 3 attempts, or if your MFA device is lost/broken, submit an IT Ticket with the category "Network".
+    </div>
+
+
+    <!-- Document 2 -->
+    <div class="meta">Keywords: password, reset, locked out, account security, MFA, login issue, change password</div>
+    <h1>Password Reset & Account Security Policy</h1>
+    
+    <div class="sla">
+        <strong>SLA & Expectations:</strong> Self-service resets are instantaneous. If IT assistance is required, expect a resolution within 2 hours.
+    </div>
+
+    <h2>Step-by-Step Instructions</h2>
+    <ol>
+        <li>Go to <strong>support.acmecorp.com/password</strong> on any device (including your personal smartphone).</li>
+        <li>Enter your Acme Corp email address and click "Forgot Password".</li>
+        <li>Verify your identity using your backup MFA method (SMS text or Authenticator app).</li>
+        <li>Create a new password. The password MUST meet these complexity rules:
+            <ul>
+                <li>Minimum of 12 characters.</li>
+                <li>Contain at least one uppercase letter and one lowercase letter.</li>
+                <li>Contain at least one number.</li>
+                <li>Contain at least one special symbol (e.g., !, @, #, $, %).</li>
+            </ul>
+        </li>
+        <li>Click "Save". You must now use this new password across all Acme Corp systems immediately.</li>
+    </ol>
+
+    <div class="troubleshooting">
+        <h3>Troubleshooting / Common Errors</h3>
+        <p><strong>Problem:</strong> "Account is temporarily locked" error message.</p>
+        <p><strong>Solution:</strong> Your account locks automatically after 5 failed login attempts. You must wait 15 minutes for the system to automatically unlock before trying again.</p>
+        <br>
+        <p><strong>Problem:</strong> New password is rejected during creation.</p>
+        <p><strong>Solution:</strong> Ensure you are not reusing any of your last 5 passwords, and double-check that your new password does not contain your first name, last name, or the word "Acme".</p>
+    </div>
+
+    <div class="escalation">
+        <strong>Escalation Rule:</strong> If you are locked out of your MFA device and cannot perform a self-service reset, submit an IT Ticket with the category "Security" or call the IT hotline directly.
+    </div>
+
+
+    <!-- Document 3 -->
+    <div class="meta">Keywords: new laptop, broken screen, hardware request, mouse, keyboard, monitor, equipment provisioning</div>
+    <h1>Hardware Request Policy</h1>
+    
+    <div class="sla">
+        <strong>SLA & Expectations:</strong> Manager approval takes up to 24 hours. Once approved, standard hardware delivery takes 3-5 business days. Critical replacements for broken primary devices take 1-2 business days.
+    </div>
+
+    <h2>Step-by-Step Instructions</h2>
+    <ol>
+        <li>Log into the IT Portal at <strong>support.acmecorp.com</strong>.</li>
+        <li>Click on "Hardware Catalog".</li>
+        <li>Select the equipment you need (e.g., MacBook Pro, Dell Monitor, wireless mouse).</li>
+        <li>In the justification box, briefly explain the business need (e.g., "Required for new project X").</li>
+        <li>Submit the request.</li>
+        <li>Your direct manager will receive an automated email to approve the expense.</li>
+        <li>Once approved, IT will provision the equipment and email you tracking or pickup details.</li>
+    </ol>
+
+    <div class="troubleshooting">
+        <h3>Troubleshooting / Common Errors</h3>
+        <p><strong>Problem:</strong> You haven't received the equipment after a week.</p>
+        <p><strong>Solution:</strong> Check the portal to see the status. The most common delay is that your manager has not clicked the "Approve" button in their email yet. Please remind them.</p>
+        <br>
+        <p><strong>Problem:</strong> Your primary laptop is physically broken or water-damaged.</p>
+        <p><strong>Solution:</strong> Do not use the standard hardware catalog. Bring the device to the local IT desk immediately or file a "Critical" priority ticket for an emergency loaner device.</p>
+    </div>
+
+    <div class="escalation">
+        <strong>Escalation Rule:</strong> If your equipment arrives damaged, or if your request has been approved by your manager but stuck in "Processing" for more than 4 business days, submit an IT Ticket.
+    </div>
+
+
+    <!-- Document 4 -->
+    <div class="meta">Keywords: install software, download app, blocked program, admin rights, software license, Zoom, Chrome</div>
+    <h1>Software Installation & Approved Tools List</h1>
+    
+    <div class="sla">
+        <strong>SLA & Expectations:</strong> Auto-approved software installs instantly. Paid software or unapproved tools require manager/security approval, which takes 2-4 business days.
+    </div>
+
+    <h2>Step-by-Step Instructions</h2>
+    <ol>
+        <li>Open the "Acme Self-Service Software Center" application installed on your computer.</li>
+        <li>Search for the software you need.</li>
+        <li>The following tools are <strong>Auto-Approved</strong> and can be installed immediately by clicking "Install":
+            <ul>
+                <li>Google Chrome & Mozilla Firefox</li>
+                <li>Zoom & Slack</li>
+                <li>7-Zip & Notepad++</li>
+            </ul>
+        </li>
+        <li>If the software is listed but says "Request License", click the button to trigger an approval workflow to your manager.</li>
+        <li>If the software is NOT listed in the Software Center, it is unapproved.</li>
+    </ol>
+
+    <div class="troubleshooting">
+        <h3>Troubleshooting / Common Errors</h3>
+        <p><strong>Problem:</strong> Prompted for an "Administrator Password" when trying to install software from the internet.</p>
+        <p><strong>Solution:</strong> Employees do not have local admin rights. You must use the "Acme Self-Service Software Center" to install software.</p>
+        <br>
+        <p><strong>Problem:</strong> The auto-approved software fails to install.</p>
+        <p><strong>Solution:</strong> Ensure you are connected to the corporate VPN, reboot your computer, and try clicking install again.</p>
+    </div>
+
+    <div class="escalation">
+        <strong>Escalation Rule:</strong> If you absolutely require a piece of software that is not listed in the Software Center for your job, submit an IT Ticket under the category "Software" with a detailed business justification. Security will review it.
+    </div>
+
+
+    <!-- Document 5 -->
+    <div class="meta">Keywords: phishing, hacked, stolen laptop, lost phone, virus, malware, security breach, strange email</div>
+    <h1>Security Incident Standard Operating Procedure (SOP)</h1>
+    
+    <div class="sla">
+        <strong>SLA & Expectations:</strong> Security incidents are Priority: Critical. The IT Security team will respond within 15 minutes, 24/7.
+    </div>
+
+    <h2>Step-by-Step Instructions</h2>
+    <ol>
+        <li><strong>Identify the Threat:</strong> Did you click a suspicious link? Enter your password on a weird site? Lose your company phone or laptop?</li>
+        <li><strong>Containment (If applicable):</strong> If you suspect a virus or clicked a malicious link on your laptop, disconnect from Wi-Fi immediately. Do NOT turn off the computer.</li>
+        <li><strong>Report Immediately:</strong> Go to <strong>support.acmecorp.com</strong> and submit a <strong>CRITICAL</strong> priority ticket.</li>
+        <li><strong>Detail the Incident:</strong> Provide exactly what happened, what time it occurred, and what device you were using. Do not forward malicious emails to other people.</li>
+        <li><strong>Await Instructions:</strong> Leave the device powered on but disconnected from the network until the Security team contacts you via an alternate method.</li>
+    </ol>
+
+    <div class="troubleshooting">
+        <h3>Troubleshooting / Common Errors</h3>
+        <p><strong>Problem:</strong> You received a suspicious email but didn't click anything.</p>
+        <p><strong>Solution:</strong> Do not file a critical ticket. Simply use the "Report Phishing" button built into your Outlook/Gmail client to alert the security team.</p>
+        <br>
+        <p><strong>Problem:</strong> You lost your company phone while traveling.</p>
+        <p><strong>Solution:</strong> File the Critical ticket immediately so IT can remotely wipe the device. Do not wait until you return from your trip to report it.</p>
+    </div>
+
+    <div class="escalation">
+        <strong>Escalation Rule:</strong> If you are unable to access the IT Portal because your account is compromised, you must immediately call the 24/7 Security Hotline at 1-800-555-ACME. Do not wait.
+    </div>
+
+
+    <!-- Document 6 -->
+    <div class="meta">Keywords: print, connect to printer, office wifi, corporate network, paper jam, map printer</div>
+    <h1>Printer & Office Network Setup</h1>
+    
+    <div class="sla">
+        <strong>SLA & Expectations:</strong> Connecting to Wi-Fi and mapping printers is immediate via self-service. If an IT dispatch is required for broken hardware, response time is 8 hours.
+    </div>
+
+    <h2>Step-by-Step Instructions</h2>
+    <ol>
+        <li><strong>To Connect to Office Wi-Fi:</strong>
+            <ul>
+                <li>Select the network named <code>AcmeCorp-Secure</code>.</li>
+                <li>Enter your standard company email and password.</li>
+                <li>Accept the security certificate if prompted.</li>
+            </ul>
+        </li>
+        <li><strong>To Map an Office Printer:</strong>
+            <ul>
+                <li>Ensure you are connected to <code>AcmeCorp-Secure</code> or plugged into an office ethernet port.</li>
+                <li>Open the Start Menu (Windows) or System Settings (Mac) and go to "Printers & Scanners".</li>
+                <li>Click "Add a Printer".</li>
+                <li>Search for the printer ID printed on the physical sticker on the machine (e.g., <code>NY-Floor3-Color</code>).</li>
+                <li>Click "Add". Drivers will install automatically.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <div class="troubleshooting">
+        <h3>Troubleshooting / Common Errors</h3>
+        <p><strong>Problem:</strong> The printer is added to your computer, but nothing prints.</p>
+        <p><strong>Solution:</strong> Walk to the physical printer. It likely has a paper jam or is out of paper. The LCD screen on the printer will tell you how to resolve this.</p>
+        <br>
+        <p><strong>Problem:</strong> Cannot connect to <code>AcmeCorp-Secure</code> Wi-Fi; password is rejected.</p>
+        <p><strong>Solution:</strong> If you recently changed your Acme Corp password, your computer may be trying to use the old one. Choose "Forget this Network" in your Wi-Fi settings, then reconnect and type the new password.</p>
+    </div>
+
+    <div class="escalation">
+        <strong>Escalation Rule:</strong> If the printer has a mechanical failure (e.g., grinding noise, broken screen), or if you are completely unable to connect to the secure Wi-Fi after forgetting the network, submit an IT Ticket with the category "Hardware".
+    </div>
+
+</body>
+</html>

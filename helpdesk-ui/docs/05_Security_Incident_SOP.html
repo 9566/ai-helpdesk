@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Incident SOP - Acme Corp</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; max-width: 780px; margin: 0 auto; padding: 40px 30px; }
+        h1 { color: #1B2A4A; border-bottom: 3px solid #d32f2f; padding-bottom: 12px; font-size: 26px; }
+        h2 { color: #2c3e50; margin-top: 30px; font-size: 18px; }
+        h3 { color: #555; margin-top: 20px; font-size: 15px; }
+        .meta { font-family: monospace; background: #f4f4f4; padding: 10px 14px; border-radius: 4px; font-size: 9pt; color: #888; margin-bottom: 20px; }
+        .sla { background: #fdf5f5; border-left: 4px solid #d32f2f; padding: 12px 16px; margin: 20px 0; font-weight: 600; color: #b71c1c; }
+        .escalation { background: #fdf5f5; border-left: 4px solid #d32f2f; padding: 12px 16px; margin: 20px 0; font-weight: 600; }
+        .troubleshooting { background: #fafafa; border: 1px solid #e0e0e0; padding: 18px; border-radius: 6px; margin: 20px 0; }
+        .troubleshooting strong { color: #C2761F; }
+        .warning-box { background: #fff3e0; border: 2px solid #e65100; padding: 15px; border-radius: 6px; margin: 20px 0; font-weight: 600; text-align: center; font-size: 14px; }
+        .note-box { background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 12px 16px; margin: 20px 0; font-size: 95%; }
+        .incident-types { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 15px 20px; margin: 15px 0; }
+        .incident-types li { margin-bottom: 6px; }
+        ol li, ul li { margin-bottom: 8px; }
+        code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 95%; }
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 9pt; color: #999; text-align: center; }
+        @media print { .meta { background: #f9f9f9; color: #aaa; font-size: 8pt; } body { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+    <div class="meta">Keywords: phishing, hacked, stolen laptop, lost phone, virus, malware, security breach, strange email, suspicious link, ransomware, data leak, unauthorized access, scam, social engineering, USB drive</div>
+
+    <h1>🛡️ Security Incident Standard Operating Procedure (SOP)</h1>
+
+    <div class="warning-box">
+        ⚠️ TIME IS CRITICAL. If you suspect a security incident, follow these steps IMMEDIATELY. Do not wait.
+    </div>
+
+    <div class="sla">
+        <strong>⏱ SLA & Expectations:</strong> Security incidents are Priority: CRITICAL. The IT Security team will respond within 15 minutes, 24/7.
+    </div>
+
+    <h2>What Counts as a Security Incident?</h2>
+    <div class="incident-types">
+        <p>Report immediately if ANY of the following occur:</p>
+        <ul>
+            <li>🔗 You <strong>clicked a suspicious link</strong> in an email, text, or chat message.</li>
+            <li>🔑 You <strong>entered your password</strong> on a website you now believe is fake.</li>
+            <li>📱 You <strong>lost or had stolen</strong> a company laptop, phone, or USB drive.</li>
+            <li>👤 You notice <strong>unauthorized access</strong> to your account (emails you didn't send, files you didn't open).</li>
+            <li>💾 You <strong>plugged in an unknown USB drive</strong> or external device found in the office.</li>
+            <li>📞 Someone <strong>called you claiming to be IT</strong> and asked for your password or remote access.</li>
+            <li>🔒 Your files are suddenly <strong>encrypted or renamed</strong> and you see a ransom note (ransomware).</li>
+            <li>📧 You <strong>accidentally sent sensitive data</strong> (customer records, financials) to the wrong person.</li>
+        </ul>
+    </div>
+
+    <h2>Step-by-Step Response Instructions</h2>
+    <ol>
+        <li><strong>STOP:</strong> Do not try to fix it yourself. Do not click any more links. Do not delete the suspicious email.</li>
+        <li><strong>DISCONNECT (if applicable):</strong> If you suspect malware or clicked a malicious link:
+            <ul>
+                <li>Disconnect from Wi-Fi <strong>immediately</strong>.</li>
+                <li>Unplug the Ethernet cable if connected.</li>
+                <li>Do <strong>NOT</strong> turn off the computer (forensic evidence may be lost).</li>
+            </ul>
+        </li>
+        <li><strong>REPORT:</strong> Go to <strong>support.acmecorp.com</strong> (from another device if yours is compromised) and submit a <strong>CRITICAL</strong> priority ticket under the category <strong>"Security"</strong>.</li>
+        <li><strong>DETAIL THE INCIDENT:</strong> In your ticket, provide:
+            <ul>
+                <li>What happened (e.g., "I clicked a link in a fake invoice email").</li>
+                <li>The exact time it occurred.</li>
+                <li>Which device you were using (include asset tag number if possible).</li>
+                <li>Whether you entered any passwords or personal information.</li>
+                <li>Attach a screenshot of the suspicious email/page if possible.</li>
+            </ul>
+        </li>
+        <li><strong>CHANGE YOUR PASSWORD:</strong> If you entered your credentials on a suspicious site, change your Acme Corp password immediately from a different, clean device at <strong>support.acmecorp.com/password</strong>.</li>
+        <li><strong>WAIT:</strong> Leave the affected device powered on but disconnected. The Security team will contact you via phone call or in person within 15 minutes.</li>
+    </ol>
+
+    <div class="troubleshooting">
+        <h2>Troubleshooting / Common Scenarios</h2>
+        <p><strong>Scenario:</strong> You received a suspicious email but did NOT click anything.</p>
+        <p><strong>Action:</strong> This is NOT a critical incident. Simply use the <strong>"Report Phishing"</strong> button built into your Outlook/Gmail client. The security team will investigate and block the sender domain. Do not forward the email to colleagues.</p>
+        <br>
+        <p><strong>Scenario:</strong> You lost your company phone while traveling.</p>
+        <p><strong>Action:</strong> File the Critical ticket <strong>immediately</strong> so IT can remotely wipe the device. Do not wait until you return. Every hour of delay increases the risk of data exposure. IT can wipe the phone remotely even if it is turned off (it will wipe on next power-on).</p>
+        <br>
+        <p><strong>Scenario:</strong> A colleague told you they were scammed — should you report it?</p>
+        <p><strong>Action:</strong> Yes. Encourage them to file their own ticket, but also file one yourself referencing their name. Security incidents can spread laterally — if one account is compromised, related accounts may also be targeted.</p>
+    </div>
+
+    <h2>Post-Incident Follow-Up</h2>
+    <div class="note-box">
+        <strong>ℹ️ What happens after you report:</strong>
+        <ol>
+            <li>The Security team will investigate and contain the threat.</li>
+            <li>If your device was compromised, IT may need to wipe and re-image it (you will receive a loaner laptop during this time).</li>
+            <li>You may be asked to complete a brief <strong>Security Awareness Refresher</strong> (a 10-minute online training module).</li>
+            <li>The incident will be documented in the company's security log (this is not punitive — it helps IT improve defenses).</li>
+            <li>IT will send you a summary email confirming the incident is resolved and what steps were taken.</li>
+        </ol>
+    </div>
+
+    <div class="escalation">
+        <strong>🚨 Escalation Rule:</strong> If you are unable to access the IT Portal because your account is compromised, you must <strong>immediately call the 24/7 Security Hotline at 1-800-555-ACME</strong>. Do not wait. Do not email. Call directly. If you suspect a data breach involving customer data, also notify your manager and the Data Protection Officer at <strong>privacy@acmecorp.com</strong>.
+    </div>
+
+    <div class="footer">Acme Corp IT Department — CONFIDENTIAL — Last Updated: September 2026</div>
+
+</body>
+</html>
