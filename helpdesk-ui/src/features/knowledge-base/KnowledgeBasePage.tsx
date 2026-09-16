@@ -17,7 +17,7 @@ export function KnowledgeBasePage() {
   });
 
   const uploadMutation = useMutation({
-    mutationFn: (doc: { title: string; category: string; content: string }) => apiUploadKBDoc(doc),
+    mutationFn: (file: File) => apiUploadKBDoc(file, 'grace@corp.com'),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['kb-docs'] });
       setUploadModalOpen(false);
@@ -39,11 +39,9 @@ export function KnowledgeBasePage() {
   const handleUploadSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!uploadTitle.trim()) return;
-    uploadMutation.mutate({
-      title: uploadTitle,
-      category: uploadCategory || 'General',
-      content: 'Sample content',
-    });
+    // Dummy file for compilation, normally would be from <input type="file">
+    const file = new File([''], uploadTitle + '.txt', { type: 'text/plain' });
+    uploadMutation.mutate(file);
   };
 
   return (
@@ -73,24 +71,24 @@ export function KnowledgeBasePage() {
           <table className="ticket-table">
             <thead>
               <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Category</th>
+                <th scope="col">File Name</th>
+                <th scope="col">Uploaded By</th>
                 <th scope="col">Status</th>
-                <th scope="col">Last Updated</th>
+                <th scope="col">Uploaded At</th>
                 <th scope="col" style={{ width: '80px' }}>Actions</th>
               </tr>
             </thead>
             <tbody>
               {docs.map(doc => (
                 <tr key={doc.id} className="ticket-table__row">
-                  <td className="ticket-title">{doc.title}</td>
-                  <td>{doc.category}</td>
+                  <td className="ticket-title">{doc.fileName}</td>
+                  <td>{doc.uploadedBy}</td>
                   <td>
                     {doc.status === 'Ready' && <StatusBadge status="Resolved" size="sm" />}
                     {doc.status === 'Processing' && <StatusBadge status="In Progress" size="sm" />}
                     {doc.status === 'Failed' && <StatusBadge status="Closed" size="sm" />}
                   </td>
-                  <td className="text-small text-secondary">{new Date(doc.updatedAt).toLocaleDateString()}</td>
+                  <td className="text-small text-secondary">{new Date(doc.uploadedAt).toLocaleDateString()}</td>
                   <td>
                     <div style={{ display: 'flex', gap: '0.5rem' }}>
                       {doc.status === 'Failed' && (

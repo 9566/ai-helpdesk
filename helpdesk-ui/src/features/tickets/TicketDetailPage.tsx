@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
+import type { Ticket } from '../../types';
 import { ArrowLeft, Send, Lock, AlertTriangle } from 'lucide-react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useAuth } from '../../hooks/useAuth';
@@ -54,8 +55,8 @@ export function TicketDetailPage() {
   });
 
   const updateMutation = useMutation({
-    mutationFn: (updates: Partial<Pick<typeof ticket, 'status' | 'priority' | 'category'>>) =>
-      apiUpdateTicket(id!, updates as any, user!.id, user!.name),
+    mutationFn: (updates: Partial<Pick<Ticket, 'status' | 'priority' | 'category' | 'assigneeId' | 'assigneeName'>>) =>
+      apiUpdateTicket(id!, updates, user!.id, user!.name),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['ticket', id] });
       queryClient.invalidateQueries({ queryKey: ['tickets'] });

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { ShieldAlert, TrendingUp, TrendingDown } from 'lucide-react';
 import { apiGetSLAMetrics, apiGetTickets } from '../../lib/apiClient';
 import { StatCard, SkeletonTable, SLAIndicator, PriorityBadge, CategoryChip } from '../../components';
 import '../../features/tickets/TicketListPage.css'; // Re-use table styles
@@ -11,7 +10,7 @@ export function SLADashboardPage() {
 
   const { data: metrics, isLoading: metricsLoading } = useQuery({
     queryKey: ['slaMetrics', timeframe],
-    queryFn: () => apiGetSLAMetrics(timeframe),
+    queryFn: () => apiGetSLAMetrics(),
     refetchInterval: 30000,
   });
 
@@ -55,20 +54,20 @@ export function SLADashboardPage() {
         <div className="dashboard-grid">
           <StatCard
             label="Resolution Rate"
-            value={`${metrics.resolutionRate}%`}
+            value={`${metrics.onTimePct}%`}
             subLabel="Tickets resolved within SLA"
-            variant={metrics.resolutionRate >= 95 ? 'success' : metrics.resolutionRate >= 90 ? 'warning' : 'error'}
+            variant={metrics.onTimePct >= 95 ? 'success' : metrics.onTimePct >= 90 ? 'warning' : 'error'}
           />
           <StatCard
             label="Average Resolution Time"
-            value={`${metrics.avgResolutionTime}h`}
+            value={`${metrics.avgResolutionHours !== null ? metrics.avgResolutionHours.toFixed(1) : 0}h`}
             subLabel="Across all priorities"
           />
           <StatCard
             label="Active Breaches"
-            value={metrics.activeBreaches}
+            value={metrics.breachedCount}
             subLabel="Tickets past SLA deadline"
-            variant={metrics.activeBreaches > 0 ? 'error' : 'success'}
+            variant={metrics.breachedCount > 0 ? 'error' : 'success'}
           />
         </div>
       ) : null}

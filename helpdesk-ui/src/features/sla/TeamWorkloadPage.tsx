@@ -1,7 +1,6 @@
-import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { apiGetWorkload } from '../../lib/apiClient';
-import { SkeletonTable, ProgressIndicator } from '../../components';
+import { SkeletonTable } from '../../components';
 
 export function TeamWorkloadPage() {
   const { data: workload, isLoading } = useQuery({
@@ -21,35 +20,35 @@ export function TeamWorkloadPage() {
 
       <div className="dashboard-section">
         {isLoading ? (
-          <SkeletonTable rows={6} cols={4} />
+          <SkeletonTable rows={6} cols={5} />
         ) : workload && workload.length > 0 ? (
           <div className="ticket-table-wrap">
             <table className="ticket-table" aria-label="Team workload">
               <thead>
                 <tr>
                   <th scope="col">Agent</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Active Tickets</th>
-                  <th scope="col" style={{ width: '30%' }}>Capacity</th>
+                  <th scope="col">Open</th>
+                  <th scope="col">In Progress</th>
+                  <th scope="col">Breached</th>
+                  <th scope="col">Avg Resolution</th>
                 </tr>
               </thead>
               <tbody>
-                {workload.map(agent => {
-                  const capacityPercent = Math.min(100, Math.round((agent.activeTickets / agent.maxCapacity) * 100));
-                  return (
-                    <tr key={agent.agentId} className="ticket-table__row">
-                      <td style={{ fontWeight: 'var(--fw-medium)' }}>{agent.agentName}</td>
-                      <td>
-                        <span className={`status-dot status-dot--${agent.status}`} />
-                        {agent.status}
-                      </td>
-                      <td>{agent.activeTickets} / {agent.maxCapacity}</td>
-                      <td>
-                        <ProgressIndicator value={capacityPercent} />
-                      </td>
-                    </tr>
-                  );
-                })}
+                {workload.map(agent => (
+                  <tr key={agent.agentId} className="ticket-table__row">
+                    <td style={{ fontWeight: 'var(--fw-medium)' }}>{agent.agentName}</td>
+                    <td>{agent.open}</td>
+                    <td>{agent.inProgress}</td>
+                    <td>
+                      <span className={agent.breached > 0 ? 'text-error' : ''} style={{ fontWeight: agent.breached > 0 ? 600 : 400 }}>
+                        {agent.breached}
+                      </span>
+                    </td>
+                    <td>
+                      {agent.avgResolutionHours !== null ? `${agent.avgResolutionHours.toFixed(1)} hrs` : 'N/A'}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

@@ -22,6 +22,7 @@ export interface User {
   role: Role;
   status: 'Active' | 'Disabled';
   avatarInitials: string;
+  department?: string;
 }
 
 export interface Ticket {

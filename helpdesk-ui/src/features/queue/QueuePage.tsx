@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { Eye } from 'lucide-react';
@@ -6,10 +6,10 @@ import { useAuth } from '../../hooks/useAuth';
 import { apiGetTicket, apiGetTickets, apiGetComments } from '../../lib/apiClient';
 import {
   StatusBadge, PriorityBadge, CategoryChip, SLAIndicator,
-  FilterBar, SkeletonTable, EmptyState, Alert, Drawer, Tabs,
+  FilterBar, SkeletonTable, EmptyState, Alert, Drawer,
   Button
 } from '../../components';
-import type { TicketStatus, Priority, Ticket } from '../../types';
+import type { TicketStatus, Priority } from '../../types';
 import '../../features/tickets/TicketListPage.css';
 import './QueuePage.css';
 
