@@ -20,17 +20,19 @@ public class GeminiService {
     @Value("${gemini.api.embedding-model}")
     private String embeddingModel;
 
+    private static final String BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/";
+
     private final WebClient webClient;
     private final ObjectMapper objectMapper;
 
     public GeminiService(WebClient.Builder webClientBuilder, ObjectMapper objectMapper) {
-        this.webClient = webClientBuilder.baseUrl("https://generativelanguage.googleapis.com/v1beta/models/").build();
+        this.webClient = webClientBuilder.build();
         this.objectMapper = objectMapper;
     }
 
     public String generateContent(String prompt, String systemInstruction, boolean jsonResponse) {
         try {
-            String url = model + ":generateContent?key=" + apiKey;
+            String url = BASE_URL + model + ":generateContent?key=" + apiKey;
             
             String jsonFormat = jsonResponse ? ",\"responseMimeType\": \"application/json\"" : "";
             
@@ -74,7 +76,7 @@ public class GeminiService {
 
     public List<Double> generateEmbedding(String text) {
         try {
-            String url = embeddingModel + ":embedContent?key=" + apiKey;
+            String url = BASE_URL + embeddingModel + ":embedContent?key=" + apiKey;
             
             String requestBody = String.format("""
                 {
